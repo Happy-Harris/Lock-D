@@ -173,7 +173,7 @@ comments and the tests, added `parseWeightInput`, and changed `x` to `×`. The r
 | Feature | Lockd | Strong-Pro | knurl-os | Evidence | Decision | Risk |
 |---|---|---|---|---|---|---|
 | Today | has (469) | `TodayPage` | Today | Lockd: date header uses UTC (`toISOString`) so it can show the wrong weekday near midnight; goal-lift card labels an **estimated 1RM as "LOAD"** with two-decimal precision (132.71 kg) | **keep Lockd's**, fix | — |
-| Train / Routines | has — **crashes**: "Maximum update depth exceeded" on `/routines` and `/routines/:id` (selector returns a new filtered array each render) | `TemplatesPage`, `TemplateEditorPage` | routines | screenshot `390-routines.png` shows only the error boundary | **keep Lockd's**, fix now | — |
+| Train / Routines | has — **crashes**: "Maximum update depth exceeded" on `/routines` and `/routines/:id` (selector returns a new filtered array each render) | `TemplatesPage`, `TemplateEditorPage` | routines | screenshot `baseline/390-routines.webp` shows only the error boundary | **keep Lockd's**, fix now | — |
 | History + detail | has | has | logbook | — | **keep Lockd's** | — |
 | Library + exercise detail (DNA, RM table, setup, lessons) | has | library, editor, detail (tests) | exercises | — | **keep Lockd's** | — |
 | Body measurements | has, integer grams/mm (correct); demo writes **fractional mm** (870 − week × 1.2) | measurements + detail | biometrics | — | **keep Lockd's**; round demo | — |
@@ -187,9 +187,9 @@ comments and the tests, added `parseWeightInput`, and changed `x` to `×`. The r
 |---|---|---|---|---|---|---|
 | Palette | vermillion `#C24A32`, paper `#F4EFE6`, near-black; tokens prefixed `--rf-` (RepForge) | stamp-L era | Mill `#0E0E0C`, Graphite, Chalk `#E8E2D4`, Steel `#9A9588`, Oxide `#C45C32`, Verdigris `#6E8B74`; Chalk light theme | Oxide and vermillion differ mainly in green (74 vs 92): same family | **port** knurl tokens (see PLAN D9 for the blend) | Every screen |
 | Type | Barlow / Barlow Condensed / IBM Plex Mono via CDN | Barlow | Big Shoulders Display 700/800 + Archivo variable, self-hosted | — | **port** knurl | — |
-| Mark | `StampMark` — **draws an "R"**, not an L (stem, bowl, diagonal leg; visible in `1024-today.png`) | stamp L | diamond-ring lock cell (`mark.tsx`) | screenshot | **port** knurl geometry as `LockdMark` | — |
+| Mark | `StampMark` — **draws an "R"**, not an L (stem, bowl, diagonal leg; visible in `baseline/1024-today.webp`) | stamp L | diamond-ring lock cell (`mark.tsx`) | screenshot | **port** knurl geometry as `LockdMark` | — |
 | Receipt / perforation / poster motifs | has (`receipt.tsx`, `paper-shell.tsx`, posters) | — | — | — | **keep**, restyle | Poster wrap |
-| Oxide discipline | accent used for nav selection, chips, badges | — | knurl itself uses Oxide on idle Log/Start buttons (see `knurl-390-*.png`) | screenshots | apply the rule: Oxide only for live/active | — |
+| Oxide discipline | accent used for nav selection, chips, badges | — | knurl itself uses Oxide on idle Log/Start buttons (see `baseline/knurl-390-*.webp`) | screenshots | apply the rule: Oxide only for live/active | — |
 | Stale names in UI | "Grok" (Lab), "Created with Grok" pill, `R` mark | "no accounts ever" copy, LOCKD.md | "Knurl" everywhere | grep | brand check in CI | — |
 
 ## 11. App-builder scaffolding (drop list)
